@@ -18,6 +18,12 @@ separation. Increasing wavelength or screen distance spreads fringes apart;
 increasing slit separation brings them closer together. Increasing slit width
 narrows the diffraction envelope.
 
+A single open slit does not send every particle to one geometrically thin line.
+It produces one broad diffraction distribution whose width depends on `λ/w`.
+The particle arrivals are individually random, but their accumulated density
+converges to that distribution. Opening the second slit adds narrower
+interference fringes inside the same broad envelope.
+
 ## Assumptions
 
 - monochromatic, mutually coherent sources;
@@ -32,4 +38,3 @@ detector represents non-negative time-averaged intensity. It should not be read
 as a literal picture of photon trajectories.
 
 [Return to the interactive demo](./)
-

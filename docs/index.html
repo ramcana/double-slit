@@ -7,6 +7,7 @@
   <meta name="theme-color" content="#060817">
   <title>Double-Slit Lab</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="wave-theme.css">
   <script src="app.js" defer></script>
 </head>
 <body>
@@ -31,8 +32,8 @@
       <div class="section-heading"><div><p class="eyebrow">02 · Apparatus</p><h2 id="controls-title">Change the setup</h2></div></div>
       <div class="control-grid">
         <label>Slit separation <output id="sep-out">3.0</output><input id="sep" type="range" min="1" max="8" value="3" step="0.1"></label>
-        <label>Slit width <output id="width-out">1.0</output><input id="width" type="range" min="0.2" max="3" value="1" step="0.1"></label>
-        <label>Wavelength λ <output id="wave-out">2.5</output><input id="wave" type="range" min="0.5" max="6" value="2.5" step="0.1"></label>
+        <label>Slit width <output id="width-out">1.2</output><input id="width" type="range" min="0.2" max="2.5" value="1.2" step="0.1"></label>
+        <label>Wavelength λ <output id="wave-out">0.5</output><input id="wave" type="range" min="0.2" max="2" value="0.5" step="0.1"></label>
         <fieldset><legend>Openings</legend><label><input type="radio" name="slits" value="1"> One slit</label><label><input type="radio" name="slits" value="2" checked> Two slits</label></fieldset>
       </div>
       <div class="readout"><span>Predicted fringe spacing</span><strong id="spacing">12.50 a.u.</strong><code>Δy = λL/d</code></div>
@@ -51,7 +52,7 @@
       <p class="eyebrow">What to notice</p>
       <h2>One amplitude. Many possible arrivals.</h2>
       <div class="cards"><article><b>λ ↑</b><h3>Fringes spread out</h3><p>A longer wavelength increases the spacing between adjacent bright bands.</p></article><article><b>d ↑</b><h3>Fringes move closer</h3><p>Moving the slit centres apart compresses the interference pattern.</p></article><article><b>w ↑</b><h3>Envelope narrows</h3><p>A wider opening produces a tighter single-slit diffraction envelope.</p></article></div>
-      <p class="note">This conceptual model uses coherent scalar waves and arbitrary units. The wave colours show signed amplitude—not photon paths. <a href="PHYSICS.md">Read assumptions and equations.</a></p>
+      <p class="note">With one slit, detections form one broad diffraction band—not a perfectly thin line. With two slits, that band is divided into interference fringes. This conceptual model uses coherent scalar waves and arbitrary units. The wave colours show signed amplitude—not photon paths. <a href="PHYSICS.md">Read assumptions and equations.</a></p>
     </section>
   </main>
   <footer>Built as an open-source teaching demo · MIT licensed</footer>

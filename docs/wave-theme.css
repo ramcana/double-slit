@@ -1,0 +1,5 @@
+/* Wave-field legend mirrors the low-glare canvas palette. */
+.legend i {
+  background: linear-gradient(90deg, #2370d2, #050919 50%, #ee524a);
+  box-shadow: 0 0 14px rgb(70 120 220 / 18%);
+}
