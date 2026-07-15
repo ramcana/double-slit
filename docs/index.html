@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore diffraction, interference, and photon detection in an interactive double-slit experiment.">
+  <meta name="theme-color" content="#060817">
+  <title>Double-Slit Lab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Interactive physics lab</p>
+    <h1>Watch probability become a pattern.</h1>
+    <p class="lede">Tune the apparatus, compare one slit with two, and fire particles to see interference emerge one detection at a time.</p>
+    <a class="skip" href="#experiment">Start experimenting ↓</a>
+  </header>
+
+  <main id="experiment">
+    <section class="lab" aria-labelledby="lab-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 · Wave field</p><h2 id="lab-title">From slits to screen</h2></div>
+        <button id="pause" class="secondary" type="button">Pause wave</button>
+      </div>
+      <canvas id="field" aria-label="Animated wave amplitude propagating from the slits to the screen"></canvas>
+      <div class="legend" aria-hidden="true"><span>negative amplitude</span><i></i><span>positive amplitude</span></div>
+    </section>
+
+    <section class="controls" aria-labelledby="controls-title">
+      <div class="section-heading"><div><p class="eyebrow">02 · Apparatus</p><h2 id="controls-title">Change the setup</h2></div></div>
+      <div class="control-grid">
+        <label>Slit separation <output id="sep-out">3.0</output><input id="sep" type="range" min="1" max="8" value="3" step="0.1"></label>
+        <label>Slit width <output id="width-out">1.0</output><input id="width" type="range" min="0.2" max="3" value="1" step="0.1"></label>
+        <label>Wavelength λ <output id="wave-out">2.5</output><input id="wave" type="range" min="0.5" max="6" value="2.5" step="0.1"></label>
+        <fieldset><legend>Openings</legend><label><input type="radio" name="slits" value="1"> One slit</label><label><input type="radio" name="slits" value="2" checked> Two slits</label></fieldset>
+      </div>
+      <div class="readout"><span>Predicted fringe spacing</span><strong id="spacing">12.50 a.u.</strong><code>Δy = λL/d</code></div>
+    </section>
+
+    <section class="results" aria-labelledby="results-title">
+      <div class="section-heading"><div><p class="eyebrow">03 · Observation</p><h2 id="results-title">Build the interference pattern</h2></div><strong id="hit-count" aria-live="polite">0 detections</strong></div>
+      <div class="result-grid">
+        <div><h3>Detection screen</h3><canvas id="screen" aria-label="Particle detections distributed according to the calculated intensity"></canvas></div>
+        <div><h3>Intensity profile</h3><canvas id="profile" aria-label="Calculated one-dimensional intensity profile"></canvas></div>
+      </div>
+      <div class="actions"><button id="fire-one" type="button">Fire 1 particle</button><button id="fire" type="button">Fire 100 particles</button><button id="reset" class="secondary" type="button">Reset detections</button></div>
+    </section>
+
+    <section class="explain">
+      <p class="eyebrow">What to notice</p>
+      <h2>One amplitude. Many possible arrivals.</h2>
+      <div class="cards"><article><b>λ ↑</b><h3>Fringes spread out</h3><p>A longer wavelength increases the spacing between adjacent bright bands.</p></article><article><b>d ↑</b><h3>Fringes move closer</h3><p>Moving the slit centres apart compresses the interference pattern.</p></article><article><b>w ↑</b><h3>Envelope narrows</h3><p>A wider opening produces a tighter single-slit diffraction envelope.</p></article></div>
+      <p class="note">This conceptual model uses coherent scalar waves and arbitrary units. The wave colours show signed amplitude—not photon paths. <a href="PHYSICS.md">Read assumptions and equations.</a></p>
+    </section>
+  </main>
+  <footer>Built as an open-source teaching demo · MIT licensed</footer>
+</body>
+</html>
